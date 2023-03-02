@@ -54,6 +54,7 @@ function App() {
             <th>Popularity</th>
             <th>Won an Oscar</th>
             <th>Won an Emmy</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
