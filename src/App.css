@@ -69,3 +69,15 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: #3e8e41;
+}
+
+button:active {
+  background-color: #2980b9;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+}
