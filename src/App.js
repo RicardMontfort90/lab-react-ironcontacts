@@ -19,14 +19,17 @@ function App() {
     if (remainingContacts.length === 0) {
       alert("No more contacts to add!");
       return;
-    }
+    };
+
     const randomIndex = Math.floor(Math.random() * remainingContacts.length);
     const randomContact = remainingContacts[randomIndex];
+    
     setContactList((prevList) => [...prevList, randomContact]);
     setRemainingContacts((prevList) =>
       prevList.filter((contact) => contact.id !== randomContact.id)
     );
   };
+
 /* Iteration 4 | Sort Contacts by Name and Popularity */
   const sortByName = () => {
     setContactList((prevList) =>
@@ -85,7 +88,6 @@ const deleteContact = (id) => {
       </table>
     </div>
   );
-}
-
+};
 
 export default App;
