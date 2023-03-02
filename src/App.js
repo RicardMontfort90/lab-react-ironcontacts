@@ -40,14 +40,17 @@ function App() {
     );
   };
 
-  const deleteContact = (id) => {
-    setContactList((prevList) => prevList.filter((contact) => contact.id !== id)
-    
-    )
-  }
+/* Iteration 5 | Remove Contacts */
+const deleteContact = (id) => {
+  setContactList((prevList) => prevList.filter((contact) => contact.id !== id));
+  setRemainingContacts((prevList) => [
+    ...prevList,
+    contacts.find((contact) => contact.id === id),
+  ]);
+};
 
   return (
-    <div>
+    <div className="App">
       <h1>Contacts</h1>
       <button onClick={addRandomContact}>Add Random Contact</button>
       <button onClick={sortByName}>Sort by Name</button>
