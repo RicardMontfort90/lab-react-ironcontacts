@@ -3,15 +3,35 @@ import contacts from "./contacts.json";
 import './App.css';
 
 function App() {
-  const [contactList] = useState(contacts.slice(0, 5));
+  /* DIFFERENT INTERACTIONS */
+  const [contactList, setContactList] = useState(contacts.slice(0, 5));
+  const [remainingContacts, setRemainingContacts] = useState(
+    contacts.slice(5)
+  );
 
+  /* Iteration 2 | Conditionally Display Awards Info */
   const renderTrophy = (won) => {
     return won ? <span role="img" aria-label="trophy">🏆</span> : null;
+  };
+
+  /* Iteration 3 | Add New Random Contacts */
+  const addRandomContact = () => {
+    if (remainingContacts.length === 0) {
+      alert("No more contacts to add!");
+      return;
+    }
+    const randomIndex = Math.floor(Math.random() * remainingContacts.length);
+    const randomContact = remainingContacts[randomIndex];
+    setContactList((prevList) => [...prevList, randomContact]);
+    setRemainingContacts((prevList) =>
+      prevList.filter((contact) => contact.id !== randomContact.id)
+    );
   };
 
   return (
     <div className="App">
       <h1>Contacts</h1>
+      <button onClick={addRandomContact}>Add Random Contact</button>
       <table>
         <thead>
           <tr>
