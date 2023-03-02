@@ -35,7 +35,9 @@ function App() {
   };
 
   const sortByPopularity = () => {
-
+    setContactList((prevList) =>
+      [...prevList].sort((a, b) => b.popularity - a.popularity)
+    );
   };
 
   return (
