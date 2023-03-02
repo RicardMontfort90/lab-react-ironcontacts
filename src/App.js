@@ -41,7 +41,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div>
       <h1>Contacts</h1>
       <button onClick={addRandomContact}>Add Random Contact</button>
       <button onClick={sortByName}>Sort by Name</button>
@@ -67,6 +67,9 @@ function App() {
               <td>{contact.popularity.toFixed(2)}</td>
               <td>{renderTrophy(contact.wonOscar)}</td>
               <td>{renderTrophy(contact.wonEmmy)}</td>
+              <td>
+                <button onClick={() => deleteContact(contact.id)}>Delete</button>
+              </td>
             </tr>
           ))}
         </tbody>
