@@ -32,6 +32,7 @@ function App() {
     <div className="App">
       <h1>Contacts</h1>
       <button onClick={addRandomContact}>Add Random Contact</button>
+      <button onClick={sortByName}>Sort by Name</button>
       <table>
         <thead>
           <tr>
