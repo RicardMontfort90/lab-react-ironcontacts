@@ -27,10 +27,14 @@ function App() {
       prevList.filter((contact) => contact.id !== randomContact.id)
     );
   };
-
+/* Iteration 4 | Sort Contacts by Name and Popularity */
   const sortByName = () => {
-
+    setContactList((prevList) =>
+      [...prevList].sort((a, b) => a.name.localeCompare(b.name))
+    );
   };
+
+
 
   return (
     <div className="App">
