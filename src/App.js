@@ -40,6 +40,10 @@ function App() {
     );
   };
 
+  const deleteContact = (id) => {
+    
+  }
+
   return (
     <div>
       <h1>Contacts</h1>
