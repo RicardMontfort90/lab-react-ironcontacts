@@ -41,7 +41,9 @@ function App() {
   };
 
   const deleteContact = (id) => {
+    setContactList((prevList) => prevList.filter((contact) => contact.id !== id)
     
+    )
   }
 
   return (
