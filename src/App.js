@@ -34,7 +34,9 @@ function App() {
     );
   };
 
+  const sortByPopularity = () => {
 
+  };
 
   return (
     <div className="App">
