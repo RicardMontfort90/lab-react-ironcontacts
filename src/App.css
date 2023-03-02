@@ -53,3 +53,8 @@ th {
   background-color: #4caf50;
   color: white;
 }
+
+th:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
