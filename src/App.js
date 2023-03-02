@@ -5,9 +5,12 @@ import './App.css';
 function App() {
   const [contactList] = useState(contacts.slice(0, 5));
 
+  const renderTrophy = (won) => {
+    return won ? <span role="img" aria-label="trophy">🏆</span> : null;
+  };
 
   return (
-    <div>
+    <div className="App">
       <h1>Contacts</h1>
       <table>
         <thead>
@@ -15,6 +18,8 @@ function App() {
             <th>Picture</th>
             <th>Name</th>
             <th>Popularity</th>
+            <th>Won an Oscar</th>
+            <th>Won an Emmy</th>
           </tr>
         </thead>
         <tbody>
@@ -25,6 +30,8 @@ function App() {
               </td>
               <td>{contact.name}</td>
               <td>{contact.popularity.toFixed(2)}</td>
+              <td>{renderTrophy(contact.wonOscar)}</td>
+              <td>{renderTrophy(contact.wonEmmy)}</td>
             </tr>
           ))}
         </tbody>
