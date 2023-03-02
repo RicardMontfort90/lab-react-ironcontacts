@@ -3,7 +3,7 @@ import contacts from "./contacts.json";
 import './App.css';
 
 function App() {
-  /* DIFFERENT INTERACTIONS */
+  /* DIFFERENT INTERACTIONS 1, 2 and 3*/
   const [contactList, setContactList] = useState(contacts.slice(0, 5));
   const [remainingContacts, setRemainingContacts] = useState(
     contacts.slice(5)
@@ -26,6 +26,10 @@ function App() {
     setRemainingContacts((prevList) =>
       prevList.filter((contact) => contact.id !== randomContact.id)
     );
+  };
+
+  const sortByName = () => {
+
   };
 
   return (
